@@ -1,21 +1,47 @@
 <!DOCTYPE html>
 <html>
     
-    <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    </head>
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="main.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap" rel="stylesheet">
+<title>Toktumi</title>
+</head>
 <body>
 
-<h2>Toktumi</h2>
-<button type="button"
+    
+<div class="container">
+<h1>toktumi</h1>
+<button type="button" class="btn btn-primary"
 onclick="generate()">
 Generate Question</button>
-<p id="demo"></p>
+<p id="question"></p>
 
+    
+        
+        
+</div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 <script>
-document.getElementById("demo").innerHTML = "";
-
-
+document.getElementById("question").innerHTML = "";
 var things = [
     "What is the first thing you noticed about me?", 
     "What do my shoes tell you about me?", 
@@ -23,16 +49,10 @@ var things = [
 
 
 ];
-
-
-
 function generate(){
 var thing = things[Math.floor(Math.random()*things.length)];
-document.getElementById("demo").innerHTML = thing;
+document.getElementById("question").innerHTML = thing;
 }
-
-
-
 </script> 
 
 </body>

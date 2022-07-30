@@ -1,0 +1,20 @@
+.container {
+    text-align: center !important;
+    padding: 50px 20px;
+    max-width: 400px;
+    height: 100vh;
+}
+
+body {
+     background-color: #F8F8F8;
+}
+
+h1 {
+font-family: 'Just Another Hand', cursive;
+    font-size: 48px;
+}
+
+#question {
+    margin-top: 20px;
+    padding: 20px;
+}
