@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Toktumi</h2>
+<button type="button"
+onclick="generate()">
+Generate Question</button>
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = "";
+
+
+var things = ['Rock', 'Paper', 'Scissor'];
+
+
+
+function generate(){
+var thing = things[Math.floor(Math.random()*things.length)];
+document.getElementById("demo").innerHTML = thing;
+}
+
+
+
+</script> 
+
+</body>
+</html>
