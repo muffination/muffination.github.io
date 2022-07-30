@@ -21,37 +21,21 @@
 <p class="subtitle">Conquer talking stage with these thought-provoking questions.</p>
 <button type="button" class="button-54"
 onclick="generate()">
-Generate Question</button>
-<p id="question"></p>
+Generate Question</button> 
+<div id="qcard"><p id="question"></p></div>
+</div>    
 </div>
-    
-        
-        
-</div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
 <script>
 document.getElementById("question").innerHTML = "";
+var qcard = document.getElementById("qcard"); 
+    
+    
 var things = [
     "What is the lie you tell yourself most often?", 
     "What do my shoes tell you about me?", 
-    "Do I seem like more of a creative or analytical type? Explain?",
-    "If there were a way to download your memories into a searchable spreadsheet, would you do it?",
+    "Do I seem like more of a creative or analytical type? Explain",
+    "If there's a way to download your memories into a searchable spreadsheet, would you do it?",
     "What do you wish you could change about yourself?",
     "How does one earn your vulnerability?"
 
@@ -59,6 +43,7 @@ var things = [
 ];
 function generate(){
 var thing = things[Math.floor(Math.random()*things.length)];
+qcard.classList.add("qcard");   
 document.getElementById("question").innerHTML = thing;
 }
 </script> 

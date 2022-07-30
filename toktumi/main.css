@@ -14,10 +14,19 @@ font-family: 'Just Another Hand', cursive;
     font-size: 48px;
 }
 
-#question {
-    margin-top: 20px;
+.qcard {
+    background: white;
+    border-radius: 12px;
+    height: 300px;
+    box-shadow: 5px 6px #e9e9e9;
+    margin-top: 40px;
     padding: 20px;
-    font-size: 28px;
+    display: flex;
+    align-items: center;
+}
+
+#question {
+    font-size: 21px;
     font-weight: bold;
 }
 
