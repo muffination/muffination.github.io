@@ -1,8 +1,8 @@
-.container {
+.container-sm {
     text-align: center !important;
-    padding: 50px 20px;
-    max-width: 400px;
+    padding: 20px;
     height: 100vh;
+
 }
 
 body {
@@ -17,4 +17,8 @@ font-family: 'Just Another Hand', cursive;
 #question {
     margin-top: 20px;
     padding: 20px;
+}
+
+button.btn.btn-primary {
+    margin-top: 20vh;
 }
