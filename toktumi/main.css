@@ -65,4 +65,9 @@ button.btn.btn-primary {
   .button-54 {
     padding: 0.25em 0.75em;
   }
+  div#qcard {
+    width: 400px;
+    margin: auto;
+    margin-top: 45px;
+}
 }
