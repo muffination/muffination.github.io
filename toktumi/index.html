@@ -18,7 +18,17 @@
     
 <div>
 <h1>toktumi</h1>
-<p class="subtitle">Conquer talking stage with these thought-provoking questions.</p>
+<p class="subtitle">Conquer talking stage with these thought-provoking topics and questions.</p>
+
+<select id="level-select" class="form-select" aria-label="Default select example" onchange="generatelist()">
+    <option selected>Select depth</option>
+    <option value="1">Level 1</option>
+    <option value="2">Level 2</option>
+    <option value="3">Level 3</option>
+  </select>
+
+
+
 <button type="button" class="button-54"
 onclick="generate()">
 Generate Question</button> 
@@ -28,24 +38,122 @@ Generate Question</button>
     
 <script>
 document.getElementById("question").innerHTML = "";
-var qcard = document.getElementById("qcard"); 
-    
-    
-var things = [
-    "What is the lie you tell yourself most often?", 
+var qcard = document.getElementById("qcard");
+var selected = document.getElementById("level-select").value;
+let topics = ["Select depth level"];
+let index = 0;
+
+function depthval(){
+var selected = document.getElementById("level-select").value;
+if (selected == "1") {//if level 1
+topics = [
     "What do my shoes tell you about me?", 
-    "Do I seem like more of a creative or analytical type? Explain",
-    "If there's a way to download your memories into a searchable spreadsheet, would you do it?",
+    "Do I seem like more of a creative or analytical type? Explain.",
     "What do you wish you could change about yourself?",
-    "How does one earn your vulnerability?"
+    "How would you best describe yourself using 3 words? Explain each.",
+    "What was your first impression of me?",
+    "Give one assumption about me.",
+    "What's your favorite topic?",
+    "Give one assumption about me that's unlikely true.",
+    "What about me intrigues you?",
+    "Do I look kind? Explain.",
+    "What does my Instagram tell you about me?",
+    "What compliment do you think I hear the most?",
+    "What are some random fun facts about you?",
+    "What's something you want to learn or wish you were better at?",
+    "Know any good jokes?",
+    "What's something that bugs you?",
+    "Tell me something embarrassing that happened to you.",
+    "What's your favorite show and why?",
+    "Do I remind you of anyone you know?",
+    "Tell me something about your family",
+    "What's your ideal wedding?",
+    "Do I intimidate you? Why or why not?",
+    "Do you think I'm usually early on time or late to events. Explain.",
+    "Who's your closest friend and why?",
+    "Where is your favorite place in the world?",
+    "Do you have a favorite author? If so, who?",
+    "What's the best meal you've ever eaten?",
+    "What are you looking forward to right now?",
+    "Are you an early riser or a night owl?",
+    "What do you like most about yourself?",
+    "What's your spirit animal?"
 
 
 ];
-function generate(){
-var thing = things[Math.floor(Math.random()*things.length)];
-qcard.classList.add("qcard");   
-document.getElementById("question").innerHTML = thing;
 }
+else if (selected == "2") {//if level 2
+topics = [
+    "What is the lie you tell yourself most often?", 
+    "If there's a way to download your memories into a searchable spreadsheet, would you do it?",
+    "What do you wish you could change about yourself?",
+    "What's your biggest fear?",
+    "What's your favorite quote?",
+    "Which is easier – to love or be loved?",
+    "Is there such a thing as luck?",
+    "Are you complicated or simple? Explain.",
+    "Explain how relationship should be.",
+    "Tell me a story where you were being selfish"
+    
+
+
+];
+}
+else if (selected == "3") {//if level 3
+topics = [
+    "Is love just a chemical reaction or is it something beyond that? Explain.",
+    "Are you really genuine? Explain.",
+    "What's your take on white lies?",
+    "Are humans really capable of unconditional love?",
+    "Would you kill one person to save 100 people?",
+    "People say that money cannot buy happiness, but can you ever be truly happy without any money?",
+    "Tell me a secret.",
+    "Which is more important, justice or mercy?",
+    "Will it ever be possible to travel through time? Space?",
+    "Are you truly happy?"
+
+];
+}
+else
+topics =["Select depth level"]
+return topics;
+}
+
+
+
+//button action
+function generatelist() {
+var topiclist = shuffleArray(depthval());
+//console.log(topiclist);
+topics = topiclist;
+}
+
+function generate(){
+/*depthval();
+var topic = topics[Math.floor(Math.random()*topics.length)];
+qcard.classList.add("qcard");   
+document.getElementById("question").innerHTML = topic;*/
+qcard.classList.add("qcard");   
+console.log(topics);
+document.getElementById("question").innerHTML = topics[index];
+if (index < (topics.length - 1))
+index = index + 1;
+else
+index = 0;
+}
+
+//shuffle
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+
+
+
 </script> 
 
 </body>
